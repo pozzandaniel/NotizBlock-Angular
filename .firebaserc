@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firtodolist": {
+      "hosting": {
+        "todolistAngular": [
+          "firtodolist"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firtodolist"
+  }
+}

@@ -2,15 +2,15 @@
     <div class="container">
         <mat-form-field appearance="outline" class="form-container">
           <mat-label>Titel</mat-label>
-          <input matInput placeholder="Schreib einen Titel hier">
+          <input [(ngModel)]="title" [ngModelOptions]="{standalone: true}" matInput placeholder="Schreib einen Titel hier">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
-        <button mat-raised-button class="darkslategray">Speichern</button>
+        <button mat-raised-button class="darkslategray" (click)="addNote()">Speichern</button>
     </div>
 
     <mat-form-field appearance="outline" class="form-container textarea-box">
         <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        <textarea [(ngModel)]="annotation" [ngModelOptions]="{standalone: true}" matInput placeholder="Ex. It makes me feel..."></textarea>
     </mat-form-field>
 </form>
 

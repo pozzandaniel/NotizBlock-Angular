@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #303030;
+
+}
+
+.indigo {
+    background-color: indigo;
+}
+
+.darkslategray {
+    background-color: darkslategray;
+}
+
+.paddingLf-24 {
+    padding-left: 24px;
+
+}
+.paddingRg-24 {
+    padding-right: 24px;
+}

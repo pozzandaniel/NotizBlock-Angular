@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngFor="let message of database; let i = index;" class="card">
+        <h2>{{ message.title }}</h2>
+        <p>{{ message.annotation }}</p>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+        <img src="/assets/img/{{postits[i % postits.length]}}.png" alt="">
+    </div>
+
+</div>

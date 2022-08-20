@@ -1,20 +1,53 @@
 form {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #303030;
 
     .container {
         display: flex;
         flex-direction: column;
 
-        button {
-            padding-top: 8px;
-            padding-bottom: 8px;
-            border: 2px solid transparent;
-
-            &:hover {
-                border: 2px solid white;
+        
+        .write-box {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            h1 {
+                font-family: 'Caveat';
+                font-weight: 700;
+                font-size: 40px;
+                position: absolute;
+                border: 1px solid black;
+                top: 100px;
+                left: auto;
+                max-width: 85%;
+                max-height: 34px;
+                overflow: hidden;
+                box-sizing: border-box;
+                word-break: break-all;
+                color: black;
             }
+    
+            p {
+                font-family: 'Caveat';
+                position: absolute;
+                font-size: 35px;
+                max-height: 61%;
+                overflow: hidden;
+                border: 1px solid black;
+                top: 160px;
+                left: auto;
+                max-width: 85%;
+                box-sizing: border-box;
+                word-break: break-all;
+                color: black;
+            }
+        }
+
+
+        img {
+            height: 520px;
+            margin: 20px 0;
         }
     }
 
@@ -24,9 +57,43 @@ form {
     }
     
     .textarea-box {
+        display: flex;
+        flex-direction: column;
         width: 50%;
+        padding-top: 1.34375em;
         textarea {
             height: 150px;
+        }
+
+        .input {
+            outline: none;
+            background-color: #303030;
+            border-style: ridge;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: rgba(230, 230, 230, 0.7);
+            cursor: pointer;
+
+            &:hover {
+                border-color: white;
+            }
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+            }
+        }
+
+        
+        button {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 2px solid transparent;
+        
+            &:hover {
+                border: 2px solid white;
+            }
         }
     }
 }

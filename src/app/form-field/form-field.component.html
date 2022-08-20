@@ -1,17 +1,37 @@
 <form>
     <div class="container">
-        <mat-form-field appearance="outline" class="form-container">
-          <mat-label>Titel</mat-label>
-          <input [(ngModel)]="title" [ngModelOptions]="{standalone: true}" matInput placeholder="Schreib einen Titel hier">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        </mat-form-field>
-        <button mat-raised-button class="darkslategray" (click)="addNote()">Speichern</button>
+        
+        
+        <div class="write-box">
+            <img src="/assets/img/notepad.png">
+            <h1>{{ title }}</h1>
+            <p>{{ annotation }}</p>
+        </div>
+        
     </div>
+    
+    
+            <div class="textarea-box">
 
-    <mat-form-field appearance="outline" class="form-container textarea-box">
-        <mat-label>Leave a comment</mat-label>
-        <textarea [(ngModel)]="annotation" [ngModelOptions]="{standalone: true}" matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
-</form>
+                <mat-form-field appearance="outline" class="form-container">
+                  <mat-label>Titel</mat-label>
+                  <input [(ngModel)]="title" [ngModelOptions]="{standalone: true}" matInput placeholder="Schreib einen Titel hier">
+                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+
+                <input class="input" type="date">
+                
+                <mat-form-field appearance="outline" class="form-container">
+                    <mat-label>Leave a comment</mat-label>
+                    <textarea [(ngModel)]="annotation" [ngModelOptions]="{standalone: true}" matInput placeholder="Ex. It makes me feel..."></textarea>
+                </mat-form-field>
+            
+                <button mat-raised-button class="darkslategray" (click)="addNote()">Speichern</button>
+
+            </div>
+            
+            
+            
+        </form>
 
 

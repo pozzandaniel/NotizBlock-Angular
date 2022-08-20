@@ -28,7 +28,7 @@ form {
                 color: black;
             }
     
-            p {
+            .note {
                 font-family: 'Caveat';
                 position: absolute;
                 font-size: 35px;
@@ -41,6 +41,26 @@ form {
                 box-sizing: border-box;
                 word-break: break-all;
                 color: black;
+            }
+
+            .date {
+                font-family: 'Caveat';
+                position: absolute;
+                font-size: 30px;
+                border: 1px solid black;
+                top: 68px;
+                left: 0;
+                color: black;
+            }
+
+            .dueDate {
+                font-family: 'Caveat';
+                position: absolute;
+                font-size: 30px;
+                border: 1px solid black;
+                top: 68px;
+                right: 15px;
+                color: red;
             }
         }
 

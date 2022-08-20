@@ -5,7 +5,9 @@
         <div class="write-box">
             <img src="/assets/img/notepad.png">
             <h1>{{ title }}</h1>
-            <p>{{ annotation }}</p>
+            <p *ngIf="title.length > 0 && annotation.length > 0" class="date">{{ currentDay }}</p>
+            <p class="dueDate">{{ dueDate }}</p>
+            <p class="note">{{ annotation }}</p>
         </div>
         
     </div>
@@ -19,7 +21,7 @@
                   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                 </mat-form-field>
 
-                <input class="input" type="date">
+                <input [(ngModel)]="dueDate" [ngModelOptions]="{standalone: true}" class="input" type="date" id="inputDate">
                 
                 <mat-form-field appearance="outline" class="form-container">
                     <mat-label>Leave a comment</mat-label>

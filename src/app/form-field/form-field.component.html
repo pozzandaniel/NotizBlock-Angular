@@ -8,6 +8,7 @@
             <p *ngIf="title.length > 0 && annotation.length > 0" class="date">{{ currentDay }}</p>
             <p class="dueDate">{{ dueDate }}</p>
             <p class="note">{{ annotation }}</p>
+            <p class="signature">{{ name }}</p>
         </div>
         
     </div>
@@ -27,6 +28,9 @@
                     <mat-label>Leave a comment</mat-label>
                     <textarea [(ngModel)]="annotation" [ngModelOptions]="{standalone: true}" matInput placeholder="Ex. It makes me feel..."></textarea>
                 </mat-form-field>
+
+                <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="input" type="text" placeholder="Schreib deinen Namen hier">
+
             
                 <button mat-raised-button class="darkslategray" (click)="addNote()">Speichern</button>
 

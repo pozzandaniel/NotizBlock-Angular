@@ -2,6 +2,10 @@
     <div *ngFor="let message of database; let i = index;" class="card">
         <h2>{{ message.title }}</h2>
         <p>{{ message.annotation }}</p>
+        <div class="date-row">
+            <p class="currentDate"></p>
+            <p class="dueDate"></p>
+        </div>
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
         <img src="/assets/img/{{postits[i % postits.length]}}.png" alt="">
     </div>

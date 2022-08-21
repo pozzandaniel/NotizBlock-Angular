@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-expansion-panel-bottom',
   templateUrl: './expansion-panel-bottom.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpansionPanelBottomComponent implements OnInit {
   panelOpenState = false;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
+
+  
+
 
 }

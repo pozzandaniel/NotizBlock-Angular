@@ -1,6 +1,6 @@
 form {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #303030;
 
     .container {
@@ -27,12 +27,32 @@ form {
                 word-break: break-all;
                 color: black;
             }
+
+            .signature {
+                font-weight: 700;
+                font-size: 36px;
+                position: absolute;
+                border: 1px solid black;
+                bottom: 25px;
+                left: 30px;
+                max-width: 85%;
+                height: 55px;
+                overflow: hidden;
+                box-sizing: border-box;
+                word-break: break-all;
+                color: black;
+                display: flex;
+                align-items: center;
+                padding-right: 20px;
+                font-family: 'Mea Culpa';
+
+            }
     
             .note {
                 font-family: 'Caveat';
                 position: absolute;
                 font-size: 35px;
-                max-height: 61%;
+                max-height: 55%;
                 overflow: hidden;
                 border: 1px solid black;
                 top: 160px;
@@ -107,6 +127,7 @@ form {
 
         
         button {
+            margin-top: 1.34375em;
             padding-top: 8px;
             padding-bottom: 8px;
             border: 2px solid transparent;

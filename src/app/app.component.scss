@@ -2,11 +2,16 @@ main {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+
 
     #canvas {
         position: absolute;
         background: black;
-        top:0;
-        left: 0;
+        top: 104px;
+        z-index: -1;
     }
 }

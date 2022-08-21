@@ -3,15 +3,17 @@ body {
     box-sizing: border-box;
     background-color: #303030;
     font-family: 'Open Sans';
+    max-width: 100%;
+    overflow-x: hidden;
 
 }
 
 .indigo {
-    background-color: indigo;
+    background-color: indigo !important;
 }
 
 .darkslategray {
-    background-color: darkslategray;
+    background-color: darkslategray !important;
 }
 
 .paddingLf-24 {
@@ -153,3 +155,17 @@ body {
          url('./fonts/caveat-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
          url('./fonts/caveat-v17-latin-700.svg#Caveat') format('svg'); /* Legacy iOS */
   }
+
+  /* mea-culpa-regular - latin */
+@font-face {
+  font-family: 'Mea Culpa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/mea-culpa-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/mea-culpa-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/mea-culpa-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/mea-culpa-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/mea-culpa-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/mea-culpa-v3-latin-regular.svg#MeaCulpa') format('svg'); /* Legacy iOS */
+}

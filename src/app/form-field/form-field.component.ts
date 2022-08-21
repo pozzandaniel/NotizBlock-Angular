@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Database } from 'src/models/database';
 import { Firestore, collectionData, collection, setDoc, doc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -10,7 +10,7 @@ import {FormControl} from '@angular/forms';
   templateUrl: './form-field.component.html',
   styleUrls: ['./form-field.component.scss']
 })
-export class FormFieldComponent implements OnInit {
+export class FormFieldComponent implements OnInit, OnChanges {
 
   date = new FormControl(new Date());
   serializedDate = new FormControl(new Date().toISOString());
@@ -21,22 +21,29 @@ export class FormFieldComponent implements OnInit {
   title = '';
   annotation = '';
   dueDate = '';
+  dueDateAsString = '';
+  name = '';
   database: Database;
 
   constructor(public firestore: Firestore) {}
 
   ngOnInit(): void {
     this.todayDate();
-    // this.database = new Database();
+  }
+
+  ngOnChanges(): void {
+      let dueDateSplit = this.dueDate.split("-");
+      console.log(dueDateSplit);
   }
   
   addNote() {
-    if(this.title.length > 0 && this.annotation.length > 0) {
+    if(this.title.length > 0 && this.annotation.length > 0 && this.dueDate.length && this.name.length > 0) {
       const coll = collection(this.firestore, 'database');
-      setDoc(doc(coll), {title: this.title, annotation: this.annotation});
-      console.log(this.dueDate);
+      setDoc(doc(coll), {title: this.title, annotation: this.annotation, currentDate: this.currentDay, dueDate: this.dueDate, name: this.name});
       this.title = '';
       this.annotation = '';
+      this.dueDate = '';
+      this.name = '';
     }
 
   }
